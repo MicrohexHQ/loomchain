@@ -413,6 +413,8 @@ func newRunCommand() *cobra.Command {
 				return err
 			}
 
+			time.Sleep(5 * time.Second)
+
 			if err := startGatewayReactors(chainID, fnRegistry, cfg, nodeSigner); err != nil {
 				return err
 			}
